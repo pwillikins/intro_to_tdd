@@ -7,9 +7,7 @@
 # The delimiter can be specified at initialization time. In the above examples, the delimiter was the string ",".
 # Any calls to add will use that delimiter.
 
-
 require 'rspec/core'
-
 require 'string_calculator'
 
 describe StringCalculator do
@@ -18,6 +16,16 @@ describe StringCalculator do
     calculator.add("")
 
     expected_value = 0
+    actual_value = expected_value
+
+    expect(actual_value).to eq expected_value
+  end
+
+  it "returns the length of the string as an integer" do
+    calculator = StringCalculator.new
+    calculator.add("string")
+
+    expected_value = 6
     actual_value = expected_value
 
     expect(actual_value).to eq expected_value
