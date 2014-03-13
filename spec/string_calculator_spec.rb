@@ -13,21 +13,39 @@ require 'string_calculator'
 describe StringCalculator do
   it "returns 0 if the add method is called with an empty string" do
     calculator = StringCalculator.new
-    calculator.add("")
 
-    expected_value = 0
-    actual_value = expected_value
+    expected = 0
+    actual = calculator.add("")
 
-    expect(actual_value).to eq expected_value
+    expect(actual).to eq expected
   end
 
-  it "returns the length of the string as an integer" do
+  it "returns 1 if the string is 1" do
     calculator = StringCalculator.new
-    calculator.add("string")
 
-    expected_value = 6
-    actual_value = expected_value
+    expected = 1
+    actual = calculator.add("1")
 
-    expect(actual_value).to eq expected_value
+    expect(actual).to eq expected
+  end
+
+  it" returns 10 if the string '1,2,7' is passed" do
+    calculator = StringCalculator.new
+
+    expected = 10
+
+    actual = calculator.add("1,2,7")
+
+    expect(actual).to eq expected
+  end
+
+  it "allows user to specify delimiter" do
+    calculator = StringCalculator.new("+")
+
+    expected = 10
+
+    actual = calculator.add("1+2+7")
+
+    expect(actual).to eq expected
   end
 end
