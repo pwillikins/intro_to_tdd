@@ -4,7 +4,6 @@ class Count
     @high_number = high_number
   end
 
-
   def run
     numbers = 1.upto(@high_number).to_a
 
@@ -16,7 +15,6 @@ class Count
       else
         num
       end
-
     end
   end
 end

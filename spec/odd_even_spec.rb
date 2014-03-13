@@ -5,25 +5,15 @@
 # If the number is odd, then the program will replace the number in the array with the text "Odd".
 
 require 'rspec/core'
-
 require 'odd_even'
 
 describe "Count" do
-#  it "should print an array from 1 to 5" do
-#    count = Count.new(5)
-#
-#    expected = [1, 2, 3, 4, 5]
-#
-#    actual = count.run
-#    expect(actual).to eq expected
-#  end
-
   it "will replace even numbers with 'Even'" do
     count = Count.new(5)
 
     expected = ["Odd", "Even", "Odd", "Even", "Odd"]
-
     actual = count.run
+
     expect(actual).to eq expected
   end
 
@@ -31,8 +21,8 @@ describe "Count" do
     count = Count.new(5)
 
     expected = ["Odd", "Even", "Odd", "Even", "Odd"]
-
     actual = count.run
+
     expect(actual).to eq expected
   end
 end
