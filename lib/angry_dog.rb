@@ -1,6 +1,10 @@
 class AngryDog
 
-  def poke
-    "growls"
+  def poke(num)
+    if num == 3
+      "barks"
+    else
+      "growls"
+    end
   end
 end
