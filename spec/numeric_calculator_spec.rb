@@ -6,6 +6,12 @@ describe NumericCalculator do
 
     expect(calculator.add(8, 9)).to eq 17
   end
+
+  it "returns the difference of two numbers" do
+    calculator = NumericCalculator.new
+
+    expect(calculator.subtract(10, 3)).to eq 7
+  end
 end
 
 
