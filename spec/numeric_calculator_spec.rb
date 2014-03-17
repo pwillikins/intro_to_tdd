@@ -1,3 +1,11 @@
+#The class is not initialized with anything special.
+#There is an add method that takes two numbers. It returns the sum of the two numbers.
+#There is a subtract method that takes two numbers. It returns the difference of the two numbers.
+#There is a save method that allows you to save a number to the calculator's memory. The number can be retrieved using the get method.
+#There is a clear method that clears the calculator's memory. When the memory is empty, get returns 0.
+#When a calculator is initialized, the memory value is 0.
+
+
 require 'numeric_calculator'
 
 describe NumericCalculator do
@@ -25,6 +33,13 @@ describe NumericCalculator do
 
     expect(calculator.get).to eq 10
   end
+
+  it "clears memory and resets it to 0" do
+    calculator = NumericCalculator.new
+    calculator.save(10)
+
+    expect(calculator.clear_to_zero).to eq 0
+  end
 end
 
 
@@ -32,18 +47,3 @@ end
 
 
 
-
-
-
-
-
-
-
-
-
-#The class is not initialized with anything special.
-#There is an add method that takes two numbers. It returns the sum of the two numbers.
-#There is a subtract method that takes two numbers. It returns the difference of the two numbers.
-#There is a save method that allows you to save a number to the calculator's memory. The number can be retrieved using the get method.
-#There is a clear method that clears the calculator's memory. When the memory is empty, get returns 0.
-#When a calculator is initialized, the memory value is 0.

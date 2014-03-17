@@ -14,4 +14,8 @@ class NumericCalculator
   def get
     @saved_number
   end
+
+  def clear_to_zero
+    @saved_number = 0
+  end
 end
