@@ -12,6 +12,19 @@ describe NumericCalculator do
 
     expect(calculator.subtract(10, 3)).to eq 7
   end
+
+  it "allows calculator to save a number" do
+    calculator = NumericCalculator.new
+
+    expect(calculator.save(1)).to eq 1
+  end
+
+  it "retrieves the saved number using the get method" do
+    calculator = NumericCalculator.new
+    calculator.save(10)
+
+    expect(calculator.get).to eq 10
+  end
 end
 
 

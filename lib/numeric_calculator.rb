@@ -6,4 +6,12 @@ class NumericCalculator
   def subtract(x, y)
     x - y
   end
-end 
+
+  def save(num)
+    @saved_number = num
+  end
+
+  def get
+    @saved_number
+  end
+end
